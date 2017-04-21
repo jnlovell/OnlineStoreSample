@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using OnlineStoreSample.Models;
+using OnlineStoreSample.Models.ItemModels;
 
 namespace OnlineStoreSample.Controllers
 {
