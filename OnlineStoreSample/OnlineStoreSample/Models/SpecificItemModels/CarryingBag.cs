@@ -8,8 +8,8 @@ namespace OnlineStoreSample.Models.SpecificItemModels
 {
     public class CarryingBag : Accessory
     {
-        public string Color { get; set; }
+        public string BagColor { get; set; }
         public string BagType { get; set; }
-        public string Size { get; set; }
+        public string BagSize { get; set; }
     }
 }

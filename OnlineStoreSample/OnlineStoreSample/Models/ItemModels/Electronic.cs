@@ -7,7 +7,6 @@ namespace OnlineStoreSample.Models.ItemModels
 {
     public class Electronic : Item
     {
-        public string Specifications { get; set; }
-        public string Warranty { get; set; }
+        public string ElectronicSpecifications { get; set; }
     }
 }

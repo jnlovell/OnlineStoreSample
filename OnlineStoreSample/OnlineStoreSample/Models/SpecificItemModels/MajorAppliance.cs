@@ -8,7 +8,7 @@ namespace OnlineStoreSample.Models.SpecificItemModels
 {
     public class MajorAppliance : Electronic
     {
-        public string ApplianceType { get; set; }
-        public string Size { get; set; }
+        public string MajorApplianceType { get; set; }
+        public string MajorApplianceSize { get; set; }
     }
 }

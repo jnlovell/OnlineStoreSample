@@ -8,8 +8,8 @@ namespace OnlineStoreSample.Models.SpecificItemModels
 {
     public class Software : Media
     {
-        public int Size { get; set; }
-        public string OperatingSystems { get; set; }
+        public int SoftwareSize { get; set; }
+        public string SoftwareOperatingSystems { get; set; }
 
     }
 }

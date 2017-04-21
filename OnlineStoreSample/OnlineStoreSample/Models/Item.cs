@@ -14,5 +14,6 @@ namespace OnlineStoreSample.Models
         public int SKU { get; set; }
         public double Price { get; set; }
         public string Company { get; set; }
+        public string Warranty { get; set; }
     }
 }

@@ -8,7 +8,7 @@ namespace OnlineStoreSample.Models.SpecificItemModels
 {
     public class VideoGame : Media
     {
-        public string GameRating { get; set; }
-        public string ConsoleName { get; set; }
+        public string VideoGameRating { get; set; }
+        public string VideoGameConsoleName { get; set; }
     }
 }

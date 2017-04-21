@@ -10,8 +10,8 @@ namespace OnlineStoreSample.Models.SpecificItemModels
 {
     public class Camera : Electronic
     {
-        public int FPS { get; set; }
+        public int CameraFPS { get; set; }
         public string CameraType { get; set; }
-        public string Resolution { get; set; }
+        public string CameraResolution { get; set; }
     }
 }

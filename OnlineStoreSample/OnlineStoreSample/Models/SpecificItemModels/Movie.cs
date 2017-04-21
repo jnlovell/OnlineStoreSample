@@ -8,7 +8,7 @@ namespace OnlineStoreSample.Models.SpecificItemModels
 {
     public class Movie : Media
     {
-        public string DiscType { get; set; }
-        public string Rating { get; set; }
+        public string MovieDiscType { get; set; }
+        public string MovieRating { get; set; }
     }
 }

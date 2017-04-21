@@ -7,9 +7,8 @@ namespace OnlineStoreSample.Models.ItemModels
 {
     public class Media : Item
     {
-        public string DeviceSpecifications { get; set; }
-        public string DeviceType { get; set; }
-        public string Warranty { get; set; }
-        public string DiscOrDownLoad { get; set; }
+        public string MediaDeviceSpecifications { get; set; }
+        public string MeidaDeviceType { get; set; }
+        public string MediaDiscOrDownLoad { get; set; }
     }
 }

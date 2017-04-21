@@ -8,10 +8,10 @@ namespace OnlineStoreSample.Models.SpecificItemModels
 {
     public class Desktop : Electronic
     {
-        public string StorageType { get; set; }
-        public int StorageSize { get; set; }
-        public int RAM { get; set; }
-        public string Processor { get; set; }
-        public string OperatingSystem { get; set; }
+        public string DesktopStorageType { get; set; }
+        public int DesktopStorageSize { get; set; }
+        public int DesktopRAM { get; set; }
+        public string DesktopProcessor { get; set; }
+        public string DesktopOperatingSystem { get; set; }
     }
 }

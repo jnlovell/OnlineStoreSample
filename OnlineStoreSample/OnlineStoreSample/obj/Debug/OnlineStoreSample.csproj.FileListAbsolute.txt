@@ -94,3 +94,7 @@ C:\Users\jnlov\Desktop\Personal Projects\OnlineStoreSample\OnlineStoreSample\bin
 C:\Users\jnlov\Desktop\Personal Projects\OnlineStoreSample\OnlineStoreSample\obj\Debug\OnlineStoreSample.csprojResolveAssemblyReference.cache
 C:\Users\jnlov\Desktop\Personal Projects\OnlineStoreSample\OnlineStoreSample\obj\Debug\OnlineStoreSample.dll
 C:\Users\jnlov\Desktop\Personal Projects\OnlineStoreSample\OnlineStoreSample\obj\Debug\OnlineStoreSample.pdb
+C:\Users\jnlov\Desktop\Personal Projects\OnlineStoreSample\OnlineStoreSample\obj\Debug\OnlineStoreSample.Migrations.InitialModel.resources
+C:\Users\jnlov\Desktop\Personal Projects\OnlineStoreSample\OnlineStoreSample\obj\Debug\OnlineStoreSample.csproj.GenerateResource.Cache
+C:\Users\jnlov\Desktop\Personal Projects\OnlineStoreSample\OnlineStoreSample\obj\Debug\OnlineStoreSample.Migrations.RecreateDBModelUsingInheritance.resources
+C:\Users\jnlov\Desktop\Personal Projects\OnlineStoreSample\OnlineStoreSample\obj\Debug\OnlineStoreSample.Migrations.UpdateDataModelNamesToBeMoreDescriptive.resources

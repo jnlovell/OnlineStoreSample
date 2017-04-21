@@ -8,7 +8,7 @@ namespace OnlineStoreSample.Models.SpecificItemModels
 {
     public class GameConsole : Electronic
     {
-        public string Color { get; set; }
-        public int Storage { get; set; }
+        public string GameConsoleColor { get; set; }
+        public int GameConsoleStorage { get; set; }
     }
 }

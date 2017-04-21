@@ -8,7 +8,7 @@ namespace OnlineStoreSample.Models.SpecificItemModels
 {
     public class MouseAndKeyBoard : Accessory
     {
-        public string ConnectionType { get; set; }
-        public string OsCompatibility { get; set; }
+        public string MouseAndKeyBoardConnectionType { get; set; }
+        public string MouseAndKeyBoardOsCompatibility { get; set; }
     }
 }

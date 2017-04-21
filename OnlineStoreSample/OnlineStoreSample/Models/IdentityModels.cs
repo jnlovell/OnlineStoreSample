@@ -3,6 +3,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using OnlineStoreSample.Models.SpecificItemModels;
 
 namespace OnlineStoreSample.Models
 {
@@ -20,6 +21,20 @@ namespace OnlineStoreSample.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<Item> Items { get; set; }
+        /*public DbSet<Camera> Cameras { get; set; }
+        public DbSet<CarryingBag> CarryingBags { get; set; }
+        public DbSet<Desktop> Desktops { get; set; }
+        public DbSet<GameConsole> GameConsoles { get; set; }
+        public DbSet<Laptop> Laptops { get; set; }
+        public DbSet<MajorAppliance> MajorAppliances { get; set; }
+        public DbSet<MouseAndKeyBoard> MouseAndKeyBoards { get; set; }
+        public DbSet<Movie> Movies { get; set; }
+        public DbSet<Software> Softwares { get; set; }
+        public DbSet<VideoGame> VideoGames { get; set; } */
+
+
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
