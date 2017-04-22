@@ -1,15 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using System.Web;
+using System.Web.DynamicData;
 using System.Web.Mvc;
 using OnlineStoreSample.Models;
 using OnlineStoreSample.Models.ItemModels;
+using OnlineStoreSample.Models.SpecificItemModels;
 
 namespace OnlineStoreSample.Controllers
 {
     public class ItemsController : Controller
     {
+        private ApplicationDbContext _context;
+
+        public ItemsController()
+        {
+            _context = new ApplicationDbContext();
+        }
+
         // GET: Items
         public ActionResult Index()
         {
@@ -26,6 +37,32 @@ namespace OnlineStoreSample.Controllers
                 return HttpNotFound();
 
             return View(item);
+        }
+
+        public void New()
+        {
+            using (_context)
+            {
+                Desktop desktop = new Desktop()
+                {
+                    Name = "HP-Tower",
+                    Company = "HP",
+                    DesktopOperatingSystem = "Windows 10",
+                    DesktopProcessor = "Intel",
+                    DesktopRAM = 8,
+                    DesktopStorageType = "Hard Drive",
+                    ElectronicSpecifications = "HP Desktop Tower with 8GB RAM",
+                    Model = "456-GHG-48W",
+                    SKU = 45834756,
+                    DesktopStorageSize = 500
+
+                };
+
+                _context.Items.Add(desktop);
+                _context.SaveChanges();
+            }
+
+            //return View("ItemForm", newContext);
         }
 
         public List<Item> GetItems()

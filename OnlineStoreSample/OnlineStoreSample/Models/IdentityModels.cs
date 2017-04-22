@@ -33,8 +33,6 @@ namespace OnlineStoreSample.Models
         public DbSet<Software> Softwares { get; set; }
         public DbSet<VideoGame> VideoGames { get; set; } */
 
-
-
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
