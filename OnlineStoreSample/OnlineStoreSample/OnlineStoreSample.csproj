@@ -189,6 +189,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CamerasController.cs" />
+    <Compile Include="Controllers\DesktopsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ItemsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -206,6 +208,10 @@
     <Compile Include="Migrations\201704211932454_UpdateDataModelNamesToBeMoreDescriptive.cs" />
     <Compile Include="Migrations\201704211932454_UpdateDataModelNamesToBeMoreDescriptive.Designer.cs">
       <DependentUpon>201704211932454_UpdateDataModelNamesToBeMoreDescriptive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704230218322_AddDataAnnotationsForItemsAndDesktops.cs" />
+    <Compile Include="Migrations\201704230218322_AddDataAnnotationsForItemsAndDesktops.Designer.cs">
+      <DependentUpon>201704230218322_AddDataAnnotationsForItemsAndDesktops.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -288,10 +294,13 @@
     <Content Include="Views\Items\Index.cshtml" />
     <Content Include="Views\Items\Detail.cshtml" />
     <Content Include="Views\Items\ItemForm.cshtml" />
-    <Content Include="Views\Items\PartialFormViews\DesktopFormView.cshtml" />
+    <Content Include="Views\Items\NewSelected.cshtml" />
+    <Content Include="Views\Desktops\DesktopForm.cshtml" />
+    <Content Include="Views\Cameras\CameraForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Camera\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -317,6 +326,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201704211932454_UpdateDataModelNamesToBeMoreDescriptive.resx">
       <DependentUpon>201704211932454_UpdateDataModelNamesToBeMoreDescriptive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704230218322_AddDataAnnotationsForItemsAndDesktops.resx">
+      <DependentUpon>201704230218322_AddDataAnnotationsForItemsAndDesktops.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

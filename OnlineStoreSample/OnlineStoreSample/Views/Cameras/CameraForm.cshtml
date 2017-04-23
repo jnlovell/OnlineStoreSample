@@ -1,0 +1,72 @@
+﻿@model OnlineStoreSample.Models.SpecificItemModels.Camera
+@{
+    ViewBag.Title = "New";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>New Camera</h2>
+
+@using (Html.BeginForm("Save", "Cameras"))
+{
+    @Html.ValidationSummary(true, "Please fix the following errors.")
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Name)
+        @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Name)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Company)
+        @Html.TextBoxFor(m => m.Company, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Company)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Model)
+        @Html.TextBoxFor(m => m.Model, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Model)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Price)
+        @Html.TextBoxFor(m => m.Price, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Price)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.SKU)
+        @Html.TextBoxFor(m => m.SKU, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.SKU)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Warranty)
+        @Html.TextBoxFor(m => m.Warranty, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Warranty)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.ElectronicSpecifications)
+        @Html.TextBoxFor(m => m.ElectronicSpecifications, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.ElectronicSpecifications)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.CameraFPS)
+        @Html.TextBoxFor(m => m.CameraFPS, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.CameraFPS)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.CameraResolution)
+        @Html.TextBoxFor(m => m.CameraResolution, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.CameraResolution)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.CameraType)
+        @Html.TextBoxFor(m => m.CameraType, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.CameraType)
+    </div>
+    
+    @Html.HiddenFor(m => m.Id)
+    @Html.AntiForgeryToken()
+    <button type="submit" class="btn btn-primary">Save</button>
+}
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+}

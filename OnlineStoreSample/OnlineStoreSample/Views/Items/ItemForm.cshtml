@@ -1,0 +1,18 @@
+﻿@model IEnumerable<string>
+@{
+    ViewBag.Title = "New";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>New Item</h2>
+
+<h3>Select Item Type</h3>
+
+<h4>Electronics</h4>
+
+<div>@Html.ActionLink("New Desktop", "New", "Desktops")</div>
+
+<div>@Html.ActionLink("New Camera", "New", "Cameras")</div>
+
+
+

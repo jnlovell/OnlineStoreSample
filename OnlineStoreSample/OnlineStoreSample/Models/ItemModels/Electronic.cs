@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace OnlineStoreSample.Models.ItemModels
 {
     public class Electronic : Item
     {
+        [Display(Name = "Specifications")]
         public string ElectronicSpecifications { get; set; }
     }
 }

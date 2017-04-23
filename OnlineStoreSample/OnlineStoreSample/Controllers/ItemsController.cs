@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Data.Entity.ModelConfiguration.Conventions;
-using System.Linq;
-using System.Web;
-using System.Web.DynamicData;
-using System.Web.Mvc;
-using OnlineStoreSample.Models;
-using OnlineStoreSample.Models.ItemModels;
+﻿using OnlineStoreSample.Models;
 using OnlineStoreSample.Models.SpecificItemModels;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web.Mvc;
 
 namespace OnlineStoreSample.Controllers
 {
@@ -39,30 +33,27 @@ namespace OnlineStoreSample.Controllers
             return View(item);
         }
 
-        public void New()
+        public ActionResult New()
         {
-            using (_context)
+            Desktop desktop = new Desktop();
+            List<string> itemTypes = new List<string>
             {
-                Desktop desktop = new Desktop()
-                {
-                    Name = "HP-Tower",
-                    Company = "HP",
-                    DesktopOperatingSystem = "Windows 10",
-                    DesktopProcessor = "Intel",
-                    DesktopRAM = 8,
-                    DesktopStorageType = "Hard Drive",
-                    ElectronicSpecifications = "HP Desktop Tower with 8GB RAM",
-                    Model = "456-GHG-48W",
-                    SKU = 45834756,
-                    DesktopStorageSize = 500
+                "Camera", "Carrying Bag", "Desktop", "Game Console", "Laptop", "Major Appliance", "Mouse And Keyboard", "Movie", "Software", "Video Game"
+            };
+            return View("ItemForm", itemTypes);
+        }
 
-                };
-
-                _context.Items.Add(desktop);
-                _context.SaveChanges();
+        [HttpPost]
+        public ActionResult NewSelected(string itemType)
+        {
+            if (itemType == "Desktop")
+            {
+                Desktop desktop = new Desktop();
+                return View("DesktopForm", desktop);
             }
 
-            //return View("ItemForm", newContext);
+
+            return View();
         }
 
         public List<Item> GetItems()
