@@ -190,10 +190,18 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CamerasController.cs" />
+    <Compile Include="Controllers\CarryingBagsController.cs" />
     <Compile Include="Controllers\DesktopsController.cs" />
+    <Compile Include="Controllers\GameConsolesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ItemsController.cs" />
+    <Compile Include="Controllers\LaptopsController.cs" />
+    <Compile Include="Controllers\MajorAppliancesController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MouseAndKeyBoardsController.cs" />
+    <Compile Include="Controllers\MoviesController.cs" />
+    <Compile Include="Controllers\SoftwaresController.cs" />
+    <Compile Include="Controllers\VideoGamesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -297,6 +305,14 @@
     <Content Include="Views\Items\NewSelected.cshtml" />
     <Content Include="Views\Desktops\DesktopForm.cshtml" />
     <Content Include="Views\Cameras\CameraForm.cshtml" />
+    <Content Include="Views\CarryingBags\CarryingBagForm.cshtml" />
+    <Content Include="Views\GameConsoles\GameConsoleForm.cshtml" />
+    <Content Include="Views\Laptops\LaptopForm.cshtml" />
+    <Content Include="Views\MajorAppliances\MajorApplianceForm.cshtml" />
+    <Content Include="Views\MouseAndKeyBoards\MouseAndKeyBoardForm.cshtml" />
+    <Content Include="Views\Movies\MovieForm.cshtml" />
+    <Content Include="Views\Softwares\SoftwareForm.cshtml" />
+    <Content Include="Views\VideoGames\VideoGameForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

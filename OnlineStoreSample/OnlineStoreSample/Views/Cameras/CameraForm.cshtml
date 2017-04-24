@@ -41,11 +41,6 @@
         @Html.ValidationMessageFor(m => m.Warranty)
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.ElectronicSpecifications)
-        @Html.TextBoxFor(m => m.ElectronicSpecifications, new { @class = "form-control" })
-        @Html.ValidationMessageFor(m => m.ElectronicSpecifications)
-    </div>
-    <div class="form-group">
         @Html.LabelFor(m => m.CameraFPS)
         @Html.TextBoxFor(m => m.CameraFPS, new { @class = "form-control" })
         @Html.ValidationMessageFor(m => m.CameraFPS)
@@ -60,7 +55,12 @@
         @Html.TextBoxFor(m => m.CameraType, new { @class = "form-control" })
         @Html.ValidationMessageFor(m => m.CameraType)
     </div>
-    
+    <div class="form-group">
+        @Html.LabelFor(m => m.ElectronicSpecifications)
+        @Html.TextAreaFor(m => m.ElectronicSpecifications, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.ElectronicSpecifications)
+    </div>
+
     @Html.HiddenFor(m => m.Id)
     @Html.AntiForgeryToken()
     <button type="submit" class="btn btn-primary">Save</button>
