@@ -1,12 +1,12 @@
-﻿@model OnlineStoreSample.Models.SpecificItemModels.CarryingBag
+﻿@model OnlineStoreSample.Models.SpecificItemModels.MouseAndKeyBoard
 @{
     ViewBag.Title = "New";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>New Carrying Bag</h2>
+<h2>New Mouse/Keyboard</h2>
 
-@using (Html.BeginForm("Save", "CarryingBags"))
+@using (Html.BeginForm("NewMouseAndKeyBoard", "Items"))
 {
     @Html.ValidationSummary(true, "Please fix the following errors.")
 
@@ -41,24 +41,14 @@
         @Html.ValidationMessageFor(m => m.Warranty)
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.AccessoryDescription)
-        @Html.TextBoxFor(m => m.AccessoryDescription, new { @class = "form-control" })
-        @Html.ValidationMessageFor(m => m.AccessoryDescription)
+        @Html.LabelFor(m => m.MouseAndKeyBoardConnectionType)
+        @Html.TextBoxFor(m => m.MouseAndKeyBoardConnectionType, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.MouseAndKeyBoardConnectionType)
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.BagColor)
-        @Html.TextBoxFor(m => m.BagColor, new { @class = "form-control" })
-        @Html.ValidationMessageFor(m => m.BagColor)
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.BagSize)
-        @Html.TextBoxFor(m => m.BagSize, new { @class = "form-control" })
-        @Html.ValidationMessageFor(m => m.BagSize)
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.BagType)
-        @Html.TextBoxFor(m => m.BagType, new { @class = "form-control" })
-        @Html.ValidationMessageFor(m => m.BagType)
+        @Html.LabelFor(m => m.MouseAndKeyBoardOsCompatibility)
+        @Html.TextBoxFor(m => m.MouseAndKeyBoardOsCompatibility, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.MouseAndKeyBoardOsCompatibility)
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.AccessoryDescription)

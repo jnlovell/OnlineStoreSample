@@ -1,12 +1,12 @@
-﻿@model OnlineStoreSample.Models.SpecificItemModels.Movie
+﻿@model OnlineStoreSample.Models.SpecificItemModels.VideoGame
 @{
     ViewBag.Title = "New";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>New Movie</h2>
-
-@using (Html.BeginForm("Save", "Movies"))
+<h2>New Videogame</h2>
+ 
+@using (Html.BeginForm("NewVideoGame", "Items"))
 {
     @Html.ValidationSummary(true, "Please fix the following errors.")
 
@@ -51,14 +51,14 @@
         @Html.ValidationMessageFor(m => m.MeidaDeviceType)
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.MovieDiscType)
-        @Html.TextBoxFor(m => m.MovieDiscType, new { @class = "form-control" })
-        @Html.ValidationMessageFor(m => m.MovieDiscType)
+        @Html.LabelFor(m => m.VideoGameConsoleName)
+        @Html.TextBoxFor(m => m.VideoGameConsoleName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.VideoGameConsoleName)
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.MovieRating)
-        @Html.TextBoxFor(m => m.MovieRating, new { @class = "form-control" })
-        @Html.ValidationMessageFor(m => m.MovieRating)
+        @Html.LabelFor(m => m.VideoGameRating)
+        @Html.TextBoxFor(m => m.VideoGameRating, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.VideoGameRating)
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.MediaDeviceSpecifications)

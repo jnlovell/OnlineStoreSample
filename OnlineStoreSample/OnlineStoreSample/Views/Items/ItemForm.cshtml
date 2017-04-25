@@ -1,4 +1,4 @@
-﻿@model IEnumerable<string>
+﻿@model string
 @{
     ViewBag.Title = "New";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -10,30 +10,30 @@
 
 <h4>Electronics</h4>
 
-<div>@Html.ActionLink("New Desktop", "New", "Desktops")</div>
+<div>@Html.ActionLink("New Desktop", "New", "Items", new { typeId = "Desktop" }, null)</div>
 
-<div>@Html.ActionLink("New Laptop", "New", "Laptops")</div>
+<div>@Html.ActionLink("New Laptop", "New", "Items", new { typeId = "Laptop" }, null)</div>
 
-<div>@Html.ActionLink("New Camera", "New", "Cameras")</div>
+<div>@Html.ActionLink("New Camera", "New", "Items", new { typeId = "Camera" }, null)</div>
 
-<div>@Html.ActionLink("New Gaming Console", "New", "GameConsoles")</div>
+<div>@Html.ActionLink("New Gaming Console", "New", "Items", new { typeId = "GameConsole" }, null)</div>
 
-<div>@Html.ActionLink("New Major Appliance", "New", "MajorAppliances")</div>
+<div>@Html.ActionLink("New Major Appliance", "New", "Items", new { typeId = "MajorAppliance" }, null)</div>
 
 
 <h4>Accessories</h4>
 
-<div>@Html.ActionLink("New Carrying Bag", "New", "CarryingBags")</div>
+<div>@Html.ActionLink("New Carrying Bag", "New", "Items", new { typeId = "CarryingBag" }, null)</div>
 
-<div>@Html.ActionLink("New Mouse/Keyboard", "New", "MouseAndKeyBoards")</div>
+<div>@Html.ActionLink("New Mouse/Keyboard", "New", "Items", new { typeId = "MouseAndKeyBoard" }, null)</div>
 
 <h4>Media</h4>
 
-<div>@Html.ActionLink("New Movie", "New", "Movies")</div>
+<div>@Html.ActionLink("New Movie", "New", "Items", new { typeId = "Movie" }, null)</div>
 
-<div>@Html.ActionLink("New Software", "New", "Softwares")</div>
+<div>@Html.ActionLink("New Software", "New", "Items", new { typeId = "Software" }, null)</div>
 
-<div>@Html.ActionLink("New Videogame", "New", "VideoGames")</div>
+<div>@Html.ActionLink("New Videogame", "New", "Items", new { typeId = "VideoGame" }, null)</div>
 
 
 

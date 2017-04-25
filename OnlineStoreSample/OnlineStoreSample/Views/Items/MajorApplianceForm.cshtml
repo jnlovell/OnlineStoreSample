@@ -1,12 +1,12 @@
-﻿@model OnlineStoreSample.Models.SpecificItemModels.Desktop
+﻿@model OnlineStoreSample.Models.SpecificItemModels.MajorAppliance
 @{
     ViewBag.Title = "New";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>New Desktop</h2>
+<h2>New Major Appliance</h2>
 
-@using (Html.BeginForm("Save", "Desktops"))
+@using (Html.BeginForm("NewMajorAppliance", "Items"))
 {
     @Html.ValidationSummary(true, "Please fix the following errors.")
 
@@ -41,29 +41,14 @@
         @Html.ValidationMessageFor(m => m.Warranty)
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.DesktopOperatingSystem)
-        @Html.TextBoxFor(m => m.DesktopOperatingSystem, new { @class = "form-control" })
-        @Html.ValidationMessageFor(m => m.DesktopOperatingSystem)
+        @Html.LabelFor(m => m.MajorApplianceType)
+        @Html.TextBoxFor(m => m.MajorApplianceType, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.MajorApplianceType)
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.DesktopProcessor)
-        @Html.TextBoxFor(m => m.DesktopProcessor, new { @class = "form-control" })
-        @Html.ValidationMessageFor(m => m.DesktopProcessor)
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.DesktopRAM)
-        @Html.TextBoxFor(m => m.DesktopRAM, new { @class = "form-control" })
-        @Html.ValidationMessageFor(m => m.DesktopRAM)
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.DesktopStorageSize)
-        @Html.TextBoxFor(m => m.DesktopStorageSize, new { @class = "form-control" })
-        @Html.ValidationMessageFor(m => m.DesktopStorageSize)
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.DesktopStorageType)
-        @Html.TextBoxFor(m => m.DesktopStorageType, new { @class = "form-control" })
-        @Html.ValidationMessageFor(m => m.DesktopStorageType)
+        @Html.LabelFor(m => m.MajorApplianceSize)
+        @Html.TextBoxFor(m => m.MajorApplianceSize, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.MajorApplianceSize)
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.ElectronicSpecifications)
@@ -80,3 +65,4 @@
 {
     @Scripts.Render("~/bundles/jqueryval")
 }
+

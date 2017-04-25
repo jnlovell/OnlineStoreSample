@@ -1,12 +1,12 @@
-﻿@model OnlineStoreSample.Models.SpecificItemModels.Camera
+﻿@model OnlineStoreSample.Models.SpecificItemModels.Movie
 @{
     ViewBag.Title = "New";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>New Camera</h2>
+<h2>New Movie</h2>
 
-@using (Html.BeginForm("Save", "Cameras"))
+@using (Html.BeginForm("NewMovie", "Items"))
 {
     @Html.ValidationSummary(true, "Please fix the following errors.")
 
@@ -41,24 +41,29 @@
         @Html.ValidationMessageFor(m => m.Warranty)
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.CameraFPS)
-        @Html.TextBoxFor(m => m.CameraFPS, new { @class = "form-control" })
-        @Html.ValidationMessageFor(m => m.CameraFPS)
+        @Html.LabelFor(m => m.MediaDiscOrDownLoad)
+        @Html.TextBoxFor(m => m.MediaDiscOrDownLoad, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.MediaDiscOrDownLoad)
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.CameraResolution)
-        @Html.TextBoxFor(m => m.CameraResolution, new { @class = "form-control" })
-        @Html.ValidationMessageFor(m => m.CameraResolution)
+        @Html.LabelFor(m => m.MeidaDeviceType)
+        @Html.TextBoxFor(m => m.MeidaDeviceType, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.MeidaDeviceType)
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.CameraType)
-        @Html.TextBoxFor(m => m.CameraType, new { @class = "form-control" })
-        @Html.ValidationMessageFor(m => m.CameraType)
+        @Html.LabelFor(m => m.MovieDiscType)
+        @Html.TextBoxFor(m => m.MovieDiscType, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.MovieDiscType)
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.ElectronicSpecifications)
-        @Html.TextAreaFor(m => m.ElectronicSpecifications, new { @class = "form-control" })
-        @Html.ValidationMessageFor(m => m.ElectronicSpecifications)
+        @Html.LabelFor(m => m.MovieRating)
+        @Html.TextBoxFor(m => m.MovieRating, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.MovieRating)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.MediaDeviceSpecifications)
+        @Html.TextAreaFor(m => m.MediaDeviceSpecifications, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.MediaDeviceSpecifications)
     </div>
 
     @Html.HiddenFor(m => m.Id)

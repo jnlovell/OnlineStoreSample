@@ -1,12 +1,12 @@
-﻿@model OnlineStoreSample.Models.SpecificItemModels.MouseAndKeyBoard
+﻿@model OnlineStoreSample.Models.SpecificItemModels.Laptop
 @{
     ViewBag.Title = "New";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>New Mouse/Keyboard</h2>
+<h2>New Laptop</h2>
 
-@using (Html.BeginForm("Save", "MouseAndKeyBoards"))
+@using (Html.BeginForm("NewLaptop", "Items"))
 {
     @Html.ValidationSummary(true, "Please fix the following errors.")
 
@@ -41,19 +41,39 @@
         @Html.ValidationMessageFor(m => m.Warranty)
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.MouseAndKeyBoardConnectionType)
-        @Html.TextBoxFor(m => m.MouseAndKeyBoardConnectionType, new { @class = "form-control" })
-        @Html.ValidationMessageFor(m => m.MouseAndKeyBoardConnectionType)
+        @Html.LabelFor(m => m.LaptopOperatingSystem)
+        @Html.TextBoxFor(m => m.LaptopOperatingSystem, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.LaptopOperatingSystem)
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.MouseAndKeyBoardOsCompatibility)
-        @Html.TextBoxFor(m => m.MouseAndKeyBoardOsCompatibility, new { @class = "form-control" })
-        @Html.ValidationMessageFor(m => m.MouseAndKeyBoardOsCompatibility)
+        @Html.LabelFor(m => m.LaptopProcessor)
+        @Html.TextBoxFor(m => m.LaptopProcessor, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.LaptopProcessor)
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.AccessoryDescription)
-        @Html.TextAreaFor(m => m.AccessoryDescription, new { @class = "form-control" })
-        @Html.ValidationMessageFor(m => m.AccessoryDescription)
+        @Html.LabelFor(m => m.LaptopRAM)
+        @Html.TextBoxFor(m => m.LaptopRAM, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.LaptopRAM)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.LaptopScreenSize)
+        @Html.TextBoxFor(m => m.LaptopScreenSize, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.LaptopScreenSize)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.LaptopStorageSize)
+        @Html.TextBoxFor(m => m.LaptopStorageSize, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.LaptopStorageSize)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.LaptopStorageType)
+        @Html.TextBoxFor(m => m.LaptopStorageType, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.LaptopStorageType)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.ElectronicSpecifications)
+        @Html.TextAreaFor(m => m.ElectronicSpecifications, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.ElectronicSpecifications)
     </div>
 
     @Html.HiddenFor(m => m.Id)

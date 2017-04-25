@@ -1,12 +1,12 @@
-﻿@model OnlineStoreSample.Models.SpecificItemModels.MajorAppliance
+﻿@model OnlineStoreSample.Models.SpecificItemModels.Camera
 @{
     ViewBag.Title = "New";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>New Major Appliance</h2>
+<h2>New Camera</h2>
 
-@using (Html.BeginForm("Save", "MajorAppliances"))
+@using (Html.BeginForm("NewCamera", "Items"))
 {
     @Html.ValidationSummary(true, "Please fix the following errors.")
 
@@ -41,14 +41,19 @@
         @Html.ValidationMessageFor(m => m.Warranty)
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.MajorApplianceType)
-        @Html.TextBoxFor(m => m.MajorApplianceType, new { @class = "form-control" })
-        @Html.ValidationMessageFor(m => m.MajorApplianceType)
+        @Html.LabelFor(m => m.CameraFPS)
+        @Html.TextBoxFor(m => m.CameraFPS, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.CameraFPS)
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.MajorApplianceSize)
-        @Html.TextBoxFor(m => m.MajorApplianceSize, new { @class = "form-control" })
-        @Html.ValidationMessageFor(m => m.MajorApplianceSize)
+        @Html.LabelFor(m => m.CameraResolution)
+        @Html.TextBoxFor(m => m.CameraResolution, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.CameraResolution)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.CameraType)
+        @Html.TextBoxFor(m => m.CameraType, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.CameraType)
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.ElectronicSpecifications)
@@ -65,4 +70,3 @@
 {
     @Scripts.Render("~/bundles/jqueryval")
 }
-
