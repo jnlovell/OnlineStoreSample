@@ -35,6 +35,5 @@ Current Functionality:
 3. Front End authentication has been implemented to make sure Item data is in an acceptable form before it is inserted into
 the databse.
 
-4. Because my Model uses inheritance, all items are stored in the same table using a Discriminator.
-This allows one controller to return any Item from the database table regardless of its type (i.e Camera,
-Desktop, Laptop, Videogame, Major Appliance)
+4. One Controller(the ItemsController) takes care of Creating, Updating, and Retreiving all Items regardless of type.  
+This allows to easly retrieve all items and worry about sorting them out later.

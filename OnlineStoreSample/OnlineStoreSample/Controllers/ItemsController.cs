@@ -17,7 +17,7 @@ namespace OnlineStoreSample.Controllers
         // GET: Items
         public ActionResult Index()
         {
-            var itemList = _context.Items.Where(i => i.Id > 0);
+            var itemList = _context.Items.ToList();
 
             return View(itemList);
         }
@@ -106,6 +106,110 @@ namespace OnlineStoreSample.Controllers
             return View("ItemForm");
         }
 
+
+        //Takes in the itemType and the itemId to return it to a view
+        [Route("Items/Edit/{typeId}/{itemId}")]
+        public ActionResult Edit(string typeId, int itemId)
+        {
+            if (typeId == "Default")
+                return View("ItemForm");
+
+            if (typeId == "Desktop")
+            {
+                var desktop = _context.Items.OfType<Desktop>().Single(m => m.Id == itemId);
+                if (desktop == null)
+                    return HttpNotFound();
+
+                return View("DesktopForm", desktop);
+            }
+
+            if (typeId == "Camera")
+            {
+                var camera = _context.Items.OfType<Camera>().Single(m => m.Id == itemId);
+                if (camera == null)
+                    return HttpNotFound();
+
+                return View("CameraForm", camera);
+            }
+
+            if (typeId == "CarryingBag")
+            {
+                var carryingBag = _context.Items.OfType<CarryingBag>().Single(m => m.Id == itemId);
+                if (carryingBag == null)
+                    return HttpNotFound();
+
+                return View("CarryingBagForm", carryingBag);
+            }
+
+            if (typeId == "GameConsole")
+            {
+                var gameConsole = _context.Items.OfType<GameConsole>().Single(m => m.Id == itemId);
+                if (gameConsole == null)
+                    return HttpNotFound();
+
+                return View("GameConsoleForm", gameConsole);
+            }
+
+            if (typeId == "Laptop")
+            {
+                var laptop = _context.Items.OfType<Laptop>().Single(m => m.Id == itemId);
+                if (laptop == null)
+                    return HttpNotFound();
+
+                return View("LaptopForm", laptop);
+            }
+
+            if (typeId == "MajorAppliance")
+            {
+                var majorAppliance = _context.Items.OfType<MajorAppliance>().Single(m => m.Id == itemId);
+                if (majorAppliance == null)
+                    return HttpNotFound();
+
+                return View("MajorApplianceForm", majorAppliance);
+            }
+
+            if (typeId == "MouseAndKeyBoard")
+            {
+                var mouseAndKeyBoard = _context.Items.OfType<MouseAndKeyBoard>().Single(m => m.Id == itemId);
+                if (mouseAndKeyBoard == null)
+                    return HttpNotFound();
+
+                return View("MouseAndKeyBoardForm", mouseAndKeyBoard);
+            }
+
+            if (typeId == "Movie")
+            {
+                var movie = _context.Items.OfType<Movie>().Single(m => m.Id == itemId);
+                if (movie == null)
+                    return HttpNotFound();
+
+                return View("MovieForm", movie);
+            }
+
+            if (typeId == "Software")
+            {
+                var software = _context.Items.OfType<Software>().Single(m => m.Id == itemId);
+                if (software == null)
+                    return HttpNotFound();
+
+                return View("SoftwareForm", software);
+            }
+
+            if (typeId == "VideoGame")
+            {
+                var videoGame = _context.Items.OfType<VideoGame>().Single(m => m.Id == itemId);
+                if (videoGame == null)
+                    return HttpNotFound();
+
+                return View("VideoGameForm", videoGame);
+            }
+
+
+            return View("ItemForm");
+        }
+
+
+
         //Returns the DesktopForm
         [HttpPost]
         public ActionResult NewDesktop(Desktop desktop)
@@ -113,7 +217,27 @@ namespace OnlineStoreSample.Controllers
             if (!ModelState.IsValid)
                 return View("DesktopForm", desktop);
 
-            _context.Items.Add(desktop);
+            if (desktop.Id == 0)
+            {
+                _context.Items.Add(desktop);
+            }
+            else
+            {
+                var desktopInDb = _context.Items.OfType<Desktop>().Single(m => m.Id == desktop.Id);
+
+                desktopInDb.Name = desktop.Name;
+                desktopInDb.Model = desktop.Model;
+                desktopInDb.Price = desktop.Price;
+                desktopInDb.SKU = desktop.SKU;
+                desktopInDb.Warranty = desktop.Warranty;
+                desktopInDb.Company = desktop.Company;
+                desktopInDb.DesktopOperatingSystem = desktop.DesktopOperatingSystem;
+                desktopInDb.DesktopProcessor = desktop.DesktopProcessor;
+                desktopInDb.DesktopRAM = desktop.DesktopRAM;
+                desktopInDb.DesktopStorageSize = desktop.DesktopStorageSize;
+                desktopInDb.DesktopStorageType = desktop.DesktopStorageType;
+                desktopInDb.ElectronicSpecifications = desktop.ElectronicSpecifications;
+            }
             _context.SaveChanges();
 
             return View("ItemForm");
@@ -125,6 +249,7 @@ namespace OnlineStoreSample.Controllers
         {
             if (!ModelState.IsValid)
                 return View("CameraForm", camera);
+
 
             _context.Items.Add(camera);
             _context.SaveChanges();

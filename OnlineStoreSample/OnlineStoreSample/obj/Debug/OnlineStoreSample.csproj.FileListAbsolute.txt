@@ -99,3 +99,7 @@ C:\Users\jnlov\Desktop\Personal Projects\OnlineStoreSample\OnlineStoreSample\obj
 C:\Users\jnlov\Desktop\Personal Projects\OnlineStoreSample\OnlineStoreSample\obj\Debug\OnlineStoreSample.Migrations.RecreateDBModelUsingInheritance.resources
 C:\Users\jnlov\Desktop\Personal Projects\OnlineStoreSample\OnlineStoreSample\obj\Debug\OnlineStoreSample.Migrations.UpdateDataModelNamesToBeMoreDescriptive.resources
 C:\Users\jnlov\Desktop\Personal Projects\OnlineStoreSample\OnlineStoreSample\obj\Debug\OnlineStoreSample.Migrations.AddDataAnnotationsForItemsAndDesktops.resources
+C:\Users\jnlov\Desktop\Personal Projects\OnlineStoreSample\OnlineStoreSample\bin\AutoMapper.dll
+C:\Users\jnlov\Desktop\Personal Projects\OnlineStoreSample\OnlineStoreSample\bin\AutoMapper.xml
+C:\Users\jnlov\Desktop\Personal Projects\OnlineStoreSample\OnlineStoreSample\obj\Debug\OnlineStoreSample.Migrations.UpdateMapping.resources
+C:\Users\jnlov\Desktop\Personal Projects\OnlineStoreSample\OnlineStoreSample\obj\Debug\OnlineStoreSample.Migrations.ChangeDataBaseBackWithOutDtos.resources
