@@ -103,3 +103,4 @@ C:\Users\jnlov\Desktop\Personal Projects\OnlineStoreSample\OnlineStoreSample\bin
 C:\Users\jnlov\Desktop\Personal Projects\OnlineStoreSample\OnlineStoreSample\bin\AutoMapper.xml
 C:\Users\jnlov\Desktop\Personal Projects\OnlineStoreSample\OnlineStoreSample\obj\Debug\OnlineStoreSample.Migrations.UpdateMapping.resources
 C:\Users\jnlov\Desktop\Personal Projects\OnlineStoreSample\OnlineStoreSample\obj\Debug\OnlineStoreSample.Migrations.ChangeDataBaseBackWithOutDtos.resources
+C:\Users\jnlov\Desktop\Personal Projects\OnlineStoreSample\OnlineStoreSample\obj\Debug\OnlineStoreSample.Migrations.seedUsers.resources

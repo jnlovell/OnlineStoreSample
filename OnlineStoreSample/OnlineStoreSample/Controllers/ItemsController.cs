@@ -15,6 +15,7 @@ namespace OnlineStoreSample.Controllers
         }
 
         // GET: Items
+        [Authorize(Roles = UserRoles.CanManageItems)]
         public ActionResult Index()
         {
             var itemList = _context.Items.ToList();
@@ -36,6 +37,7 @@ namespace OnlineStoreSample.Controllers
         // GET: Items/New/Id
         //Called to decide which Form to return to the client.
         //We needed a custome route because if we used Id it would over write each Model ID
+        [Authorize(Roles = UserRoles.CanManageItems)]
         [Route("Items/New/{typeId}")]
         public ActionResult New(string typeId)
         {
@@ -108,6 +110,7 @@ namespace OnlineStoreSample.Controllers
 
 
         //Takes in the itemType and the itemId to return it to a view
+        [Authorize(Roles = UserRoles.CanManageItems)]
         [Route("Items/Edit/{typeId}/{itemId}")]
         public ActionResult Edit(string typeId, int itemId)
         {
@@ -212,6 +215,7 @@ namespace OnlineStoreSample.Controllers
 
         //Returns the DesktopForm
         [HttpPost]
+        [Authorize(Roles = UserRoles.CanManageItems)]
         public ActionResult NewDesktop(Desktop desktop)
         {
             if (!ModelState.IsValid)
@@ -245,6 +249,7 @@ namespace OnlineStoreSample.Controllers
 
         //Returns the CameraForm
         [HttpPost]
+        [Authorize(Roles = UserRoles.CanManageItems)]
         public ActionResult NewCamera(Camera camera)
         {
             if (!ModelState.IsValid)
@@ -259,6 +264,7 @@ namespace OnlineStoreSample.Controllers
 
         //Returns the CarryingBagForm
         [HttpPost]
+        [Authorize(Roles = UserRoles.CanManageItems)]
         public ActionResult NewCarryingBag(CarryingBag carryingBag)
         {
             if (!ModelState.IsValid)
@@ -272,6 +278,7 @@ namespace OnlineStoreSample.Controllers
 
         //Returns the GameConsoleForm
         [HttpPost]
+        [Authorize(Roles = UserRoles.CanManageItems)]
         public ActionResult NewGameConsole(GameConsole gameConsole)
         {
             if (!ModelState.IsValid)
@@ -285,6 +292,7 @@ namespace OnlineStoreSample.Controllers
 
         //Returns the LaptopForm
         [HttpPost]
+        [Authorize(Roles = UserRoles.CanManageItems)]
         public ActionResult NewLaptop(Laptop laptop)
         {
             if (!ModelState.IsValid)
@@ -298,6 +306,7 @@ namespace OnlineStoreSample.Controllers
 
         //Returns the MajorApplianceForm
         [HttpPost]
+        [Authorize(Roles = UserRoles.CanManageItems)]
         public ActionResult NewMajorAppliance(MajorAppliance majorAppliance)
         {
             if (!ModelState.IsValid)
@@ -311,6 +320,7 @@ namespace OnlineStoreSample.Controllers
 
         //Returns the MouseAndKeyBoardForm
         [HttpPost]
+        [Authorize(Roles = UserRoles.CanManageItems)]
         public ActionResult NewMouseAndKeyBoard(MouseAndKeyBoard mouseAndKeyBoard)
         {
             if (!ModelState.IsValid)
@@ -324,6 +334,7 @@ namespace OnlineStoreSample.Controllers
 
         //Returns the MovieForm
         [HttpPost]
+        [Authorize(Roles = UserRoles.CanManageItems)]
         public ActionResult NewMovie(Movie movie)
         {
             if (!ModelState.IsValid)
@@ -337,6 +348,7 @@ namespace OnlineStoreSample.Controllers
 
         //Returns the SoftwareForm
         [HttpPost]
+        [Authorize(Roles = UserRoles.CanManageItems)]
         public ActionResult NewSoftware(Software software)
         {
             if (!ModelState.IsValid)
@@ -350,6 +362,7 @@ namespace OnlineStoreSample.Controllers
 
         //Returns the VideoGameForm
         [HttpPost]
+        [Authorize(Roles = UserRoles.CanManageItems)]
         public ActionResult NewVideoGame(VideoGame videoGame)
         {
             if (!ModelState.IsValid)
