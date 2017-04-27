@@ -270,8 +270,26 @@ namespace OnlineStoreSample.Controllers
             if (!ModelState.IsValid)
                 return View("CameraForm", camera);
 
+            if (camera.Id == 0)
+            {
+                _context.Items.Add(camera);
+            }
+            else
+            {
+                var cameraInDb = _context.Items.OfType<Camera>().Single(m => m.Id == camera.Id);
 
-            _context.Items.Add(camera);
+                cameraInDb.Name = camera.Name;
+                cameraInDb.Model = camera.Model;
+                cameraInDb.Price = camera.Price;
+                cameraInDb.SKU = camera.SKU;
+                cameraInDb.Company = camera.Company;
+                cameraInDb.Warranty = camera.Warranty;
+                cameraInDb.ElectronicSpecifications = camera.ElectronicSpecifications;
+                cameraInDb.CameraFPS = camera.CameraFPS;
+                cameraInDb.CameraResolution = camera.CameraResolution;
+                cameraInDb.CameraType = camera.CameraType;
+            }
+
             _context.SaveChanges();
 
             return View("ItemForm");
@@ -285,7 +303,26 @@ namespace OnlineStoreSample.Controllers
             if (!ModelState.IsValid)
                 return View("CarryingBagForm", carryingBag);
 
-            _context.Items.Add(carryingBag);
+            if (carryingBag.Id == 0)
+            {
+                _context.Items.Add(carryingBag);
+            }
+            else
+            {
+                var carryingBagInDb = _context.Items.OfType<CarryingBag>().Single(m => m.Id == carryingBag.Id);
+
+                carryingBagInDb.Name = carryingBag.Name;
+                carryingBagInDb.Price = carryingBag.Price;
+                carryingBagInDb.SKU = carryingBag.SKU;
+                carryingBagInDb.Warranty = carryingBag.Warranty;
+                carryingBagInDb.Model = carryingBag.Model;
+                carryingBagInDb.Company = carryingBag.Company;
+                carryingBagInDb.AccessoryDescription = carryingBag.AccessoryDescription;
+                carryingBagInDb.BagColor = carryingBag.BagColor;
+                carryingBagInDb.BagSize = carryingBag.BagSize;
+                carryingBagInDb.BagType = carryingBag.BagType;
+            }
+
             _context.SaveChanges();
 
             return View("ItemForm");
@@ -299,7 +336,24 @@ namespace OnlineStoreSample.Controllers
             if (!ModelState.IsValid)
                 return View("GameConsoleForm", gameConsole);
 
-            _context.Items.Add(gameConsole);
+            if (gameConsole.Id == 0)
+            {
+                _context.Items.Add(gameConsole);
+            }
+            else
+            {
+                var gameConsoleInDb = _context.Items.OfType<GameConsole>().Single(m => m.Id == gameConsole.Id);
+
+                gameConsoleInDb.Name = gameConsole.Name;
+                gameConsoleInDb.Model = gameConsole.Model;
+                gameConsoleInDb.Price = gameConsole.Price;
+                gameConsoleInDb.SKU = gameConsole.SKU;
+                gameConsoleInDb.Warranty = gameConsole.Warranty;
+                gameConsoleInDb.Company = gameConsole.Company;
+                gameConsoleInDb.ElectronicSpecifications = gameConsole.ElectronicSpecifications;
+                gameConsoleInDb.GameConsoleColor = gameConsole.GameConsoleColor;
+                gameConsoleInDb.GameConsoleStorage = gameConsole.GameConsoleStorage;
+            }
             _context.SaveChanges();
 
             return View("ItemForm");
@@ -313,7 +367,28 @@ namespace OnlineStoreSample.Controllers
             if (!ModelState.IsValid)
                 return View("LaptopForm", laptop);
 
-            _context.Items.Add(laptop);
+            if (laptop.Id == 0)
+            {
+                _context.Items.Add(laptop);
+            }
+            else
+            {
+                var laptopInDb = _context.Items.OfType<Laptop>().Single(m => m.Id == laptop.Id);
+
+                laptopInDb.Name = laptopInDb.Name;
+                laptopInDb.Model = laptopInDb.Model;
+                laptopInDb.Price = laptop.Price;
+                laptopInDb.SKU = laptop.SKU;
+                laptopInDb.Warranty = laptop.Warranty;
+                laptopInDb.Company = laptop.Company;
+                laptopInDb.ElectronicSpecifications = laptop.ElectronicSpecifications;
+                laptopInDb.LaptopOperatingSystem = laptop.LaptopOperatingSystem;
+                laptopInDb.LaptopProcessor = laptop.LaptopProcessor;
+                laptopInDb.LaptopRAM = laptop.LaptopRAM;
+                laptopInDb.LaptopScreenSize = laptop.LaptopScreenSize;
+                laptopInDb.LaptopStorageSize = laptop.LaptopStorageSize;
+                laptopInDb.LaptopStorageType = laptop.LaptopStorageType;
+            }
             _context.SaveChanges();
 
             return View("ItemForm");
@@ -327,7 +402,24 @@ namespace OnlineStoreSample.Controllers
             if (!ModelState.IsValid)
                 return View("MajorApplianceForm", majorAppliance);
 
-            _context.Items.Add(majorAppliance);
+            if (majorAppliance.Id == 0)
+            {
+                _context.Items.Add(majorAppliance);
+            }
+            else
+            {
+                var majorApplianceInDb = _context.Items.OfType<MajorAppliance>().Single(m => m.Id == majorAppliance.Id);
+
+                majorApplianceInDb.Name = majorAppliance.Name;
+                majorApplianceInDb.Price = majorAppliance.Price;
+                majorApplianceInDb.SKU = majorAppliance.SKU;
+                majorApplianceInDb.Warranty = majorAppliance.Warranty;
+                majorApplianceInDb.Model = majorAppliance.Model;
+                majorApplianceInDb.Company = majorAppliance.Company;
+                majorApplianceInDb.ElectronicSpecifications = majorAppliance.ElectronicSpecifications;
+                majorApplianceInDb.MajorApplianceSize = majorAppliance.MajorApplianceSize;
+                majorApplianceInDb.MajorApplianceType = majorAppliance.MajorApplianceType;
+            }
             _context.SaveChanges();
 
             return View("ItemForm");

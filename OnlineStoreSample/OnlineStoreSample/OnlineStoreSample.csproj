@@ -319,6 +319,7 @@
     <Content Include="Views\Items\SoftwareForm.cshtml" />
     <Content Include="Views\Items\VideoGameForm.cshtml" />
     <Content Include="Views\Shared\_EmployeeLayout.cshtml" />
+    <Content Include="Views\Home\EmployeeIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

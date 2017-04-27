@@ -1,15 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using OnlineStoreSample.Models;
 using System.Web.Mvc;
 
 namespace OnlineStoreSample.Controllers
 {
     public class HomeController : Controller
     {
+
+
         public ActionResult Index()
         {
+            if (User.IsInRole(UserRoles.CanManageItems))
+            {
+                return View("EmployeeIndex");
+            }
             return View();
         }
 
