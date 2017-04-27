@@ -31,11 +31,14 @@ Current Functionality:
 1. A user role has been added so only employees that use the admin@store.com account can use CRUD actions.
 Here I am using [Authorize] so no outside user can call any CRUD actions.  
 
-2. Full CRUD functionality for Items using only one Controller(ItemsController) and ability to 
+2. Two different home pages for employees who login as admin@store.com and customers.  This helps to 
+block off anonymous users from navigating to Views that invoke CRUD actions on ITEMS.
+
+3. Full CRUD functionality for Items using only one Controller(ItemsController) and ability to 
 choose the type of Item we want to add to the database or edit(i.e. Desktop, Laptop. etc.)
 
-3. Use of Inheretance with models and Code-First work flow to create a table called Items in a MS SQL Database.
+4. Use of Inheretance with models and Code-First work flow to create a table called Items in a MS SQL Database.
 Here I am using Code-First migrations for full versioning of my database.
 
-4. Front End authentication has been implemented to make sure Item data is in an acceptable form before it is inserted into
+5. Front End authentication has been implemented to make sure Item data is in an acceptable form before it is inserted into
 the databse.
