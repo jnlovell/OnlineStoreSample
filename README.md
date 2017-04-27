@@ -15,7 +15,8 @@ MY goals for this project are as follows:
 
 Current Focus(I will update this section as I make further progress on this application):
 
-1. Finish update action to for Amin User Role to update Items in the database
+1. Finish update actions for the Amin User Role to update Items in the database/ Just mapping the data before 
+saving changes.
 
 Next Task:
 
@@ -34,7 +35,7 @@ Here I am using [Authorize] so no outside user can call any CRUD actions.
 choose the type of Item we want to add to the database or edit(i.e. Desktop, Laptop. etc.)
 
 3. Use of Inheretance with models and Code-First work flow to create a table called Items in a MS SQL Database.
-Here I am using migrations for full versioning of my database.
+Here I am using Code-First migrations for full versioning of my database.
 
 4. Front End authentication has been implemented to make sure Item data is in an acceptable form before it is inserted into
 the databse.
