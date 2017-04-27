@@ -108,6 +108,21 @@ namespace OnlineStoreSample.Controllers
             return View("ItemForm");
         }
 
+        [Authorize(Roles = UserRoles.CanManageItems)]
+        [Route("Items/Delete/{ItemId}")]
+        public ActionResult Delete(int ItemId)
+        {
+            var itemToDelete = _context.Items.Single(m => m.Id == ItemId);
+
+            if (itemToDelete == null)
+                return HttpNotFound();
+
+            _context.Items.Remove(itemToDelete);
+            _context.SaveChanges();
+
+            return RedirectToAction("Index", "Items");
+        }
+
 
         //Takes in the itemType and the itemId to return it to a view
         [Authorize(Roles = UserRoles.CanManageItems)]
